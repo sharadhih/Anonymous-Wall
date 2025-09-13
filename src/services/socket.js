@@ -1,5 +1,5 @@
 import { io } from "socket.io-client";
-const socket = io(process.env.REACT_APP_API_URL, {
+const socket = io(import.meta.env.VITE_REACT_APP_API_URL, {
     transports: ['websocket'],
 });
 export default socket;
