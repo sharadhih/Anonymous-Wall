@@ -7,9 +7,6 @@ import Post from './pages/Post';
 
 
 function App() {
- 
-// color theme:
-//https://colorhunt.co/palette/000000cfffe2a2d5c6f6f6f6
 
   return (
       <Router>
