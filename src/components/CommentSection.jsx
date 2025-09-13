@@ -12,7 +12,7 @@ const CommentSection = ({ postId, socket }) => {
     useEffect(() => {
         const fetchComments = async () => {
             try {
-                const res = await api.get(`/posts/${postId}/comments`);
+                const res = await api.get(`/api/posts/${postId}/comments`);
                 setComments(Array.isArray(res.data.comments) ? res.data.comments : []);
             } catch (err) {
                 setComments([]);
@@ -39,7 +39,7 @@ const CommentSection = ({ postId, socket }) => {
         e.preventDefault();
         setLoading(true);
         try {
-            const res = await api.post(`/posts/${postId}/comments`, { content });
+            const res = await api.post(`/api/posts/${postId}/comments`, { content });
             setContent("");
             // Add the new comment locally
             setComments(prev => [...prev, res.data]);

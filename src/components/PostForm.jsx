@@ -10,7 +10,7 @@ const PostForm = ({ onPostCreated, socket }) => {
     e.preventDefault();
     setLoading(true);
     try {
-      const res = await api.post('/posts', { content });
+  const res = await api.post('/api/posts', { content });
       setContent('');
       onPostCreated(res.data);
       socket.emit('createPost', res.data); // Notify server

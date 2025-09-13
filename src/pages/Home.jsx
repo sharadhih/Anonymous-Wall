@@ -14,8 +14,8 @@ const Home = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    api.get('/posts').then(res => {
-      setPosts(res.data.posts || []);
+  api.get('/api/posts').then(res => {
+  setPosts(res.data.posts || []);
     });
     socket.on('newPost', post => {
       setPosts(prev => prev.some(p => p._id === post._id) ? prev : [post, ...prev]);

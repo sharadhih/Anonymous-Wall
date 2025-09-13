@@ -16,7 +16,7 @@ const Post = () => {
 		useEffect(() => {
 			const fetchPost = async () => {
 				try {
-					const res = await api.get(`/posts/${id}`);
+					const res = await api.get(`/api/posts/${id}`);
 					setPost(res.data.post || res.data);
 				} catch (err) {
 					setPost(null);
@@ -24,7 +24,7 @@ const Post = () => {
 			};
 			const fetchComments = async () => {
 				try {
-					const res = await api.get(`/posts/${id}/comments`);
+					const res = await api.get(`/api/posts/${id}/comments`);
 					setComments(res.data);
 				} catch (err) {
 					setComments([]);

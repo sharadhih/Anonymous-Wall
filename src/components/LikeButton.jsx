@@ -39,7 +39,7 @@ const LikeButton = ({ postId, likesCount = 0, likedBy = [], onLike }) => {
     try {
       const clientId = localStorage.getItem('clientId');
       const res = await api.patch(
-        `/posts/${postId}/like`,
+        `/api/posts/${postId}/like`,
         {},
         { headers: { 'x-client-id': clientId } }
       );

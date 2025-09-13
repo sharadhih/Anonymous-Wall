@@ -14,12 +14,12 @@ const PostDetails = () => {
 
     useEffect(() => {
         const fetchPost = async () => {
-            const res = await api.get(`/posts/${id}`);
+            const res = await api.get(`/api/posts/${id}`);
             setPost(res.data);
         };
 
         const fetchComments = async () => {
-            const res = await api.get(`/posts/${id}/comments`);
+            const res = await api.get(`/api/posts/${id}/comments`);
             setComments(res.data);
         };
 
