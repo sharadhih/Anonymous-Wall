@@ -27,7 +27,9 @@ const io = new Server(server, {
 app.set('io', io); // <-- Add this line to make io available in controllers
 
 app.use(helmet());
-app.use(cors({origin: process.env.CLIENT_URL, credentials: true}));
+app.use(cors({origin: "https://anonymous-wall-zero.vercel.app/",
+  // process.env.CLIENT_URL,
+   credentials: true}));
 app.use(express.json());
 app.use(cookieParser());    
 
