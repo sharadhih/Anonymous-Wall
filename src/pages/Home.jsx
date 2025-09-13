@@ -6,7 +6,7 @@ import LikeButton from "../components/LikeButton";
 import { useNavigate } from "react-router-dom";
 import Footer from "../components/Footer";
 
-const socket = io('http://localhost:5000');
+const socket = io(process.env.REACT_APP_API_URL);
 
 const Home = () => {
 

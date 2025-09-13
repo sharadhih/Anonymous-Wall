@@ -5,7 +5,7 @@ import api from "../services/api";
 import { io } from "socket.io-client";
 import CommentSection from "./CommentSection";
 
-const socket = io('http://localhost:5000');
+const socket = io(process.env.REACT_APP_API_URL);
 
 const PostDetails = () => {
     const { id } = useParams();
